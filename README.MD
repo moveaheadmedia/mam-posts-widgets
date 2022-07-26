@@ -16,6 +16,6 @@ License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 `[mam-posts count="3" categories="100,50,20"]`
 
-## == Installation ==
+## == Installation == 
 * Upload "mam-posts-widgets" to the ”/wp-content/plugins/” directory.
 * Activate the plugin through the ”Plugins” menu in WordPress.
