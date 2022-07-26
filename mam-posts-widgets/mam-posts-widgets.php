@@ -224,10 +224,12 @@ function mam_posts($atts)
         <div class="mam-posts-list-pagination">
             <?php
             $GLOBALS['wp_query']->max_num_pages = $query->max_num_pages;
-            the_posts_pagination([
+            $navHtml = get_the_posts_pagination([
                 'prev_text' => __('<i class="fas fa-angle-left"></i>'),
                 'next_text' => __('<i class="fas fa-angle-right"></i>'),
+                'screen_reader_text' => __( 'A' )
             ]);
+            echo str_replace('<h2 class="screen-reader-text">A</h2>', '', $navHtml);
             ?>
         </div>
     </div>
