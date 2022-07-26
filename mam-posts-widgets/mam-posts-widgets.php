@@ -170,7 +170,6 @@ function mam_posts($atts)
     }
 
     $args = array(
-        'nopaging' => false,
         'posts_per_page' => $a['count'],
         'paged' => $paged,
         'post_type' => array('post'),
@@ -180,7 +179,6 @@ function mam_posts($atts)
         'order' => 'DESC',
         'orderby' => 'date',
         'posts_per_archive_page' => $a['count'],
-        'nopaging' => false,
         'category__in' => $categories
     );
     $query = new WP_Query($args);
@@ -207,6 +205,7 @@ function mam_posts($atts)
                     <div class="col-md-8">
                         <div class="mam-posts-post-item">
                             <h3><?php echo get_the_title(); ?></h3>
+                            <div class="mam-posts-post-excerpt"><?php echo get_the_excerpt(); ?></div>
                             <div class="mam-posts-meta">
                                 <?php if ($_category) { ?>
                                     <span class="mam-posts-meta-category"><?php echo $_category; ?></span>
