@@ -205,15 +205,15 @@ function mam_posts($atts)
                     <div class="col-md-8">
                         <div class="mam-posts-post-item">
                             <h3><?php echo get_the_title(); ?></h3>
-                            <div class="mam-posts-post-excerpt"><?php echo get_the_excerpt(); ?></div>
                             <div class="mam-posts-meta">
                                 <?php if ($_category) { ?>
                                     <span class="mam-posts-meta-category"><?php echo $_category; ?></span>
                                 <?php } ?>
                                 <span class="mam-posts-meta-date"><?php echo get_the_date(); ?></span>
-                                <a href="<?php echo get_permalink(); ?>" title="<?php echo get_the_title(); ?>"
-                                   class="mam-posts-meta-read-more"><?php _e('Read More'); ?></a>
                             </div>
+                            <div class="mam-posts-post-excerpt"><?php echo get_the_excerpt(); ?></div>
+                            <a href="<?php echo get_permalink(); ?>" title="<?php echo get_the_title(); ?>"
+                               class="mam-posts-meta-read-more"><?php _e('Read More'); ?></a>
                         </div>
                     </div>
                 </div>
